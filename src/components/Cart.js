@@ -15,16 +15,7 @@ const Cart = () => {
 }*/
 
 
-  useEffect(() => {
-    const getTotal = () => {
-        const res = products.reduce((prev,item) => {   /* reduce lo que hace es tener un acumulador dentro de index, una sumatoria */
-        return prev + (item.price * item.cantidad)
-    }, 0)
-    setTotal(res)
-}
-getTotal()
-}, [total]) 
-
+const getTotalPrice = () => { return products.reduce((prev, act) => prev + act.cantidad * act.price, 0); }
 
   
     const {products, clearCart } = useCart() /* hacer un products.length */
@@ -33,7 +24,7 @@ getTotal()
     <div>
         <div >Carrito</div>
         {products.map((p, i) => <li key={i}>{p.name}</li>)}
-        <span className="text-info">Total: ${total}</span>
+        <span className="text-info">Total: ${getTotalPrice()}</span>
         <button className='btn' onClick={clearCart}>Limpiar Carrito</button>
         </div>
   )

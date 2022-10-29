@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import { Link } from 'react-router-dom'
 import Card from './Card'
+import Carousel from './Carousel'
 
 
 /* ------------ SACARLO DE ACA ------------------------ */
@@ -47,6 +48,7 @@ const getProducts = () => {
 
   return (
     <div>
+      <div><Carousel/> </div>
         { loading ? <h1> Cargando... </h1>
         : 
         products.map( p => <Card key={p.id} {...p}/>)}

@@ -51,7 +51,7 @@ const ItemDetail = () => {
           <div>
 	      		<p className="title-up">Zapas a la moda!</p>
 	      		<h2>{product.name}</h2>
-	      		<h4>$174 <span>$237</span></h4>	
+	      		<h4>${product.price} <span>$237</span></h4>	
 	      		<div className="section-fluid">
 	      			<div className="desc-1">{product.description}</div>
 	      			<input className="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
