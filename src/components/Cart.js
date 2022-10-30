@@ -4,10 +4,6 @@ import { useCart} from './context/CartContext'
 
 const Cart = () => {
 
-
-  const [total, setTotal] =  useState(0)
-
-
 /*  const getTotal = () => {
   const subtotales = products.map(ic => ic.cantidad * ic.price)
   const total = subtotales.reduce((total,cant) => total + cant, 0)

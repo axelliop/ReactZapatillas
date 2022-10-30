@@ -21,7 +21,7 @@ const useCart = () => {
 
 const [products, setProducts] = useLocalStorage('products', [])
 
-const getTotalPrice = () => { return cart.reduce((prev, act) => prev + act.count * act.price, 0); }
+
 
 const addToCart = ( product ) => {  
 setProducts(products => [...products, product ])
@@ -37,7 +37,6 @@ const clearCart = () => {
     addToCart: addToCart,  /* en referencia a las funciones con el mismo nombre */
     clearCart: clearCart,
     count: products.length,
-    getTotalPrice: getTotalPrice
     }
 
    return (
